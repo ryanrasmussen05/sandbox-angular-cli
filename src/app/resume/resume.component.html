@@ -1,0 +1,64 @@
+<div class="center mb4">
+    <h1>Employment</h1>
+</div>
+
+<ng-template ngFor let-resumeItem let-last="last" [ngForOf]="resumeItems">
+
+    <div class="image-text-container text-container">
+        <div class="image">
+            <img class="small" [src]="getImage(resumeItem.image)">
+        </div>
+        <div class="text">
+            <div class="size-20 weight-500">{{resumeItem.jobTitle}}</div>
+            <div class="size-16">
+                <span><b>{{resumeItem.company}}</b></span>
+                <span>{{resumeItem.location}}</span>
+            </div>
+            <div class="size-12">
+                {{resumeItem.startDate + " - " + resumeItem.endDate}}
+            </div>
+            <ul class="size-14">
+                <li *ngFor="let bullet of resumeItem.bullets">
+                    {{bullet}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="!last" class="divider my4"></div>
+
+</ng-template>
+
+
+<div class="center my4">
+    <h1>Education</h1>
+</div>
+
+<ng-template ngFor let-educationItem let-last="last" [ngForOf]="educationItems">
+
+    <div class="image-text-container text-container">
+        <div class="image">
+            <img class="small" [src]="getImage(educationItem.image)">
+        </div>
+        <div class="text">
+            <div class="size-20 weight-500">{{educationItem.degree + ", " + educationItem.minor}}</div>
+            <div class="size-16">
+                <span><b>{{educationItem.school}}</b></span>
+            </div>
+            <div class="size-12">
+                {{educationItem.location}}
+            </div>
+            <ul class="size-14">
+                <li class="item">{{"Graduated " + educationItem.graduationDate}}</li>
+                <li class="item">{{"GPA: " + educationItem.gpa}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="!last" class="divider my4"></div>
+
+</ng-template>
+
+<div class="mt4">
+    <rr-footer></rr-footer>
+</div>

@@ -1,0 +1,55 @@
+[
+  {
+    "jobTitle": "Software Engineer",
+    "company": "Aviture",
+    "image": "aviture.png",
+    "location": "Omaha, NE",
+    "startDate": "July 2014",
+    "endDate": "Present",
+    "bullets": [
+      "Developer on several government and commercial projects, working with clients including the US Air Force, US Strategic Command, and the University of Nebraska Medical Center",
+      "Work on agile teams, participating in sprint planning, retrospectives, task breakdown, and daily standups",
+      "Gained great experience with front-end web technologies including AngularJS, Backbone, and Sass, and build systems including Webpack, Grunt, and Gulp",
+      "Enhanced understanding of back-end technologies including Java, Node, and MongoDB"
+    ]
+  },
+  {
+    "jobTitle": "Software Engineer",
+    "company": "Lockheed Martin",
+    "image": "lockheed.png",
+    "location": "Papillion, NE",
+    "startDate": "June 2013",
+    "endDate": "July 2014",
+    "bullets": [
+      "Java Developer on the ISPAN GAP CIE contract",
+      "Gained expertise in Spring, Hibernate, GWT, JSP, and JavaScript",
+      "Worked on new features and bugs as assigned, and with Systems Engineers to develop requirements and technical approaches",
+      "Participated in the full software development life cycle while working on both Agile and Waterfall teams"
+    ]
+  },
+  {
+    "jobTitle": "Software Engineer Intern",
+    "company": "Nebraska Global",
+    "image": "nebraskaglobal.png",
+    "location": "Lincoln, NE",
+    "startDate": "August 2012",
+    "endDate": "May 2013",
+    "bullets": [
+      "Worked on an individual project to develop an internal application used by the software start-up EliteForm",
+      "Developed an MVC web application using C# .NET and Visual Studio which gathers user metrics from the EliteForm database using Entity Framework and standard SQL queries",
+      "Developed User Interface to cleanly present gathered information"
+    ]
+  },
+  {
+    "jobTitle": "Web Developer Intern",
+    "company": "Duncan Aviation",
+    "image": "duncanaviation.png",
+    "location": "Lincoln, NE",
+    "startDate": "December 2011",
+    "endDate": "August 2012",
+    "bullets": [
+      "Worked with a team of developers to convert Duncan Aviation's myDuncan website into a mobile web application following Responsive Web Design patterns",
+      "Gained in-depth experience with Java, JSF, HTML, and CSS"
+    ]
+  }
+]

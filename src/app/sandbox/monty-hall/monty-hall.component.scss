@@ -1,0 +1,50 @@
+@import '../../../assets/styles/variables';
+
+:host {
+  display: block;
+}
+
+.door {
+  cursor: pointer;
+
+  .cover {
+    background-color: #2e3dff;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.open {
+    cursor: default;
+
+    .cover {
+      display: none!important;
+    }
+  }
+
+  &.selected {
+    box-shadow: orange 0 0 11px 5px;
+  }
+
+  @media (max-width: $media-breakpoint) {
+    img {
+      width: 75px;
+    }
+  }
+}
+
+.test-output {
+  font-size: 2em;
+
+  &.win {
+    color: green;
+  }
+
+  &.lose {
+    color: red;
+  }
+}

@@ -1,0 +1,15 @@
+.particle-controls {
+  background-color: #262626;
+
+  select {
+    //foundation is missing this for chrome
+    -webkit-appearance: none;
+  }
+
+  label {
+    cursor: pointer;
+    color: white;
+  }
+}
+
+

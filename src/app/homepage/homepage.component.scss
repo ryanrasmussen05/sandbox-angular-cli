@@ -1,0 +1,30 @@
+@import '../../assets/styles/variables';
+
+:host {
+  display: block;
+}
+
+.banner {
+  background-color: $home-page-banner-color;
+  color: white;
+
+  .name {
+    font-size: 44px;
+    font-weight: 400;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .location {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.standard-link {
+  font-weight: 500;
+  font-size: 20px;
+}

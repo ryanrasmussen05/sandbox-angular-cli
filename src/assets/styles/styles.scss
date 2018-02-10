@@ -1,0 +1,115 @@
+@import "foundation";
+@import "basscss";
+@import "variables";
+@import "assets/font/foundation-icons.css";
+
+html, input, select, button {
+  font-family: RobotoDraft, Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url('assets/images/background.jpg');
+  margin: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.weight-300 { font-weight: 300; }
+.weight-400 { font-weight: 400; }
+.weight-500 { font-weight: 500; }
+.weight-600 { font-weight: 700; }
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-20 { font-size: 20px; }
+.size-24 { font-size: 24px; }
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.text-container {
+  max-width: 800px;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wide-container {
+  max-width: 1100px;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.divider {
+  border-top: 1px solid rgba(34, 36, 38, 0.35);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  &.small {
+    width: 150px;
+    height: auto;
+  }
+  &.medium {
+    width: 250px;
+    height: auto;
+  }
+}
+
+a.standard-link {
+  color: black;
+  text-decoration: underline;
+  &:hover {
+    color: royalblue;
+  }
+}
+
+.image-text-container {
+  @extend .flex;
+
+  @media (max-width: $media-breakpoint) {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+
+  .image {
+    @extend .flex-none;
+    @extend .centered;
+    margin-right: 20px;
+
+    @media (max-width: $media-breakpoint) {
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .text {
+    @extend .flex-auto;
+  }
+}

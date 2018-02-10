@@ -1,0 +1,14 @@
+[
+  {
+    "title": "SAC Sphero Labyrinth",
+    "url": "https://play.google.com/store/apps/details?id=com.rhino.sacsphero",
+    "image": "sac.png",
+    "description": "I wrote this app for the Strategic Air Command & Aerospace Museum to use for education purposes.  The app connects to a Sphero robot via bluetooth, and allows the user to send direction commands to navigate the Sphero through a maze."
+  },
+  {
+    "title": "Foscam Control Center",
+    "url": "https://play.google.com/store/apps/details?id=com.rhino.foscam",
+    "image": "foscam.png",
+    "description": "My first attempt at a full featured Android application, I wrote Foscam Control Center to control older model Foscam IP Cameras because I found the other available Android applications clunky and hard to use.  This was created specifically for older model Foscams, and with many new models coming out, this app is more or less obsolete, and no longer being maintained."
+  }
+]

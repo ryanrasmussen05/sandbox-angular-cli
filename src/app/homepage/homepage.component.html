@@ -1,0 +1,63 @@
+<div class="banner center p4">
+    <div class="name mb3">Ryan Rasmussen</div>
+    <div class="title mb1">Software Engineer</div>
+    <div class="location mb2">Papillion, Nebraska</div>
+    <div>
+        <a class="inline-block mr1" href="http://www.linkedin.com/in/ryanrasmussen05" target="_blank">
+            <span class="button">LinkedIn</span>
+        </a>
+        <a class="inline-block" href="https://github.com/ryanrasmussen05" target="_blank">
+            <span class="button secondary">GitHub</span>
+        </a>
+    </div>
+</div>
+
+<div class="text-container">
+    <h2>About</h2>
+    <div class="mb2">
+        I am a full-stack web developer and an Android developer in my spare time.  I built this site using
+        <b>New Angular with TypeScript</b>, <b>Foundation 6</b>, and <b>Angular CLI / Webpack</b>
+         as a way to stay up-to-date on the latest browser technologies, and as a sandbox for learning to use various libraries.
+    </div>
+    <button class="button" routerLink="/resume">Resume</button>
+</div>
+
+<div class="divider my3"></div>
+
+<img class="image medium centered" src="../../assets/images/rhino_logo-teal.png">
+
+<div class="text-container">
+    <h2>Android Development</h2>
+    <div class="mb3">
+        I publish apps to Google Play under the developer name <b>Rhino Development</b>.
+        I currently have two apps in the store, and a couple more in progress.
+    </div>
+
+    <div class="image-text-container my3" *ngFor="let androidApp of androidApps">
+        <div class="image">
+            <a href="{{androidApp.url}}" target="_blank">
+                <img class="small" [src]="getImage(androidApp.image)">
+            </a>
+        </div>
+        <div class="text">
+            <a class="standard-link" href="{{androidApp.url}}" target="_blank">{{androidApp.title}}</a>
+            <div>
+                <p>{{androidApp.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="divider my3"></div>
+
+<div class="text-container">
+    <h2>Sandbox</h2>
+    <div class="mb2">
+        This is the area I use to store various components I create while learning new/interesting libraries.
+    </div>
+    <button class="button" routerLink="/sandbox">Sandbox</button>
+</div>
+
+<div class="mt4">
+    <rr-footer></rr-footer>
+</div>

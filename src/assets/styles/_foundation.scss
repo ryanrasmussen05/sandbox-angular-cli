@@ -1,0 +1,6 @@
+@import '~foundation-sites/scss/foundation';
+@import 'settings';
+
+@include foundation-button();
+@include foundation-switch();
+@include foundation-form-select();

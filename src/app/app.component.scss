@@ -1,0 +1,62 @@
+@import "../assets/styles/variables";
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-bar {
+  height: $menu-bar-height;
+  background-color: $menu-bar-color;
+
+  .page-title {
+    color: $menu-bar-title-color;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dropdown-button {
+    display: none;
+
+    @media (max-width: $media-breakpoint) {
+      display: inline-block;
+    }
+  }
+
+  .nav-buttons {
+    @media (max-width: $media-breakpoint) {
+      display: none !important;
+    }
+  }
+
+  button {
+    width: 88px;
+    height: $menu-bar-height - 5px;
+    color: $menu-bar-button-color;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    &.active {
+      color: $menu-bar-active-button-color;
+      box-shadow: inset 0 -2px 0 0 $menu-bar-active-button-color;
+    }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
+    z-index: 2;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}

@@ -1,0 +1,59 @@
+<div class="flex flex-wrap justify-start items-center p1">
+    <div class="flex-auto">
+        <button class="button mr1 mb1" (click)="initializeTests(false)">Run 'Stick' Test</button>
+        <button class="button mb1" (click)="initializeTests(true)">Run 'Switch' Test</button>
+    </div>
+    <div class="flex-none mb1">
+        <button class="button secondary" (click)="initializeGame()">Reset</button>
+    </div>
+</div>
+
+<div class="center">
+    <h1 class="m0 mt2 mb4">Monty Hall Paradox</h1>
+</div>
+
+<div class="text-container flex justify-between items-center">
+    <div class="door relative" [class.open]="isDoorOpen(1)" [class.selected]="selectedDoor === 1" (click)="doorClick(1)">
+        <img class="small" [src]="getImage(1)">
+        <div class="cover flex justify-center items-center">
+            1
+        </div>
+    </div>
+    <div class="door relative" [class.open]="isDoorOpen(2)" [class.selected]="selectedDoor === 2" (click)="doorClick(2)">
+        <img class="small" [src]="getImage(2)">
+        <div class="cover flex justify-center items-center">
+            2
+        </div>
+    </div>
+    <div class="door relative" [class.open]="isDoorOpen(3)" [class.selected]="selectedDoor === 3" (click)="doorClick(3)">
+        <img class="small" [src]="getImage(3)">
+        <div class="cover flex justify-center items-center">
+            3
+        </div>
+    </div>
+</div>
+
+<div class="center" *ngIf="!runningTest">
+    <div *ngIf="gameState === 'initial'" class="size-24 weight-400 mt4">Choose a door</div>
+    <button class="button mt4" (click)="openRandomLoser()" *ngIf="gameState === 'openLoser'">
+        Open A Losing Door
+    </button>
+    <div *ngIf="gameState === 'stickOrSwitch'" class="mt4">
+        <button class="button mr1" (click)="switchDoor(false)">{{ 'Stick With Door ' + selectedDoor }}</button>
+        <button class="button" (click)="switchDoor(true)">{{ 'Switch To Door ' + getOtherAvailableDoor() }}</button>
+    </div>
+    <button class="button mt4" (click)="finishGame()" *ngIf="gameState === 'reveal'">Reveal</button>
+    <h1 *ngIf="gameState === 'gameOver'">{{ finishText }}</h1>
+    <div *ngIf="gameState === 'testCompleted'" class="mt4">
+        <span>
+            {{ 'Won: ' + winners }}
+        </span>
+        <span>
+            {{ 'Lost: ' + losers }}
+        </span>
+    </div>
+</div>
+
+<div class="wide-container mt4">
+    <span class="test-output {{result}} inline-block mr2" *ngFor="let result of testOutputs">{{result | uppercase}}</span>
+</div>

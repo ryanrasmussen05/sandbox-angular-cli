@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rr-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  showMenu: boolean = false;
+
+  toggleMenu(event: MouseEvent) {
+    this.showMenu = !this.showMenu;
+    event.stopPropagation();
+  }
+
+  hideMenu() {
+    this.showMenu = false;
+  }
 }
