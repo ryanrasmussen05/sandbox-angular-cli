@@ -15,9 +15,10 @@
 <div class="text-container">
     <h2>About</h2>
     <div class="mb2">
-        I am a full-stack web developer and an Android developer in my spare time.  I built this site using
+        I am a full-stack web developer and a mobile developer in my spare time. I built this site using
         <b>Angular (2+) with TypeScript</b>, <b>Foundation 6</b>, and <b>Angular CLI / Webpack</b>
-         as a way to stay up-to-date on the latest browser technologies, and as a sandbox for learning to use various libraries.
+        as a way to stay up-to-date on the latest browser technologies, and as a sandbox for learning to use various
+        libraries.
     </div>
     <button class="button" routerLink="/resume">Resume</button>
 </div>
@@ -27,22 +28,25 @@
 <img class="image medium centered" src="../../assets/images/rhino_logo-teal.png">
 
 <div class="text-container">
-    <h2>Android Development</h2>
+    <h2>Mobile Development</h2>
     <div class="mb3">
-        I publish apps to Google Play under the developer name <b>Rhino Development</b>.
-        I currently have two apps in the store, and a couple more in progress.
+        I publish apps to Google Play under the developer name <b>Rhino Development</b>, and currently have one app in
+        the
+        Apple App Store written for <b>Strategic Air Command & Aerospace Museum</b>.
     </div>
 
-    <div class="image-text-container my3" *ngFor="let androidApp of androidApps">
+    <div class="image-text-container my3" *ngFor="let mobileApp of mobileApps">
         <div class="image">
-            <a href="{{androidApp.url}}" target="_blank">
-                <img class="small" [src]="getImage(androidApp.image)">
-            </a>
+            <img class="small" [src]="getImage(mobileApp.image)">
         </div>
         <div class="text">
-            <a class="standard-link" href="{{androidApp.url}}" target="_blank">{{androidApp.title}}</a>
+            <span class="title-text">{{ mobileApp.title }}</span>
+            <a *ngIf="mobileApp.androidUrl" [href]="mobileApp.androidUrl" target="_blank"
+               class="standard-link">Android</a>
+            <a *ngIf="mobileApp.appleUrl" [href]="mobileApp.appleUrl" target="_blank" class="standard-link">iOS</a>
+
             <div>
-                <p>{{androidApp.description}}</p>
+                <p>{{ mobileApp.description }}</p>
             </div>
         </div>
     </div>

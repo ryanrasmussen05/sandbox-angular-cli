@@ -80,7 +80,7 @@ img {
 }
 
 a.standard-link {
-  color: black;
+  color: $primary-theme-color;
   text-decoration: underline;
   &:hover {
     color: royalblue;

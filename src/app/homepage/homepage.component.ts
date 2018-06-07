@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AndroidApp } from '../static-content/interface/android-app';
+import { MobileApp } from '../static-content/interface/mobile-app';
 import { StaticContentService } from '../static-content/static-content.service';
 
 @Component({
@@ -10,13 +10,13 @@ import { StaticContentService } from '../static-content/static-content.service';
 })
 
 export class HomepageComponent implements OnInit {
-    androidApps: AndroidApp[];
+    mobileApps: MobileApp[];
 
     constructor(private staticContentService: StaticContentService) {}
 
     ngOnInit() {
-        this.staticContentService.getAndroidApps()
-            .then(androidApps => this.androidApps = androidApps);
+        this.staticContentService.getMobileApps()
+            .then(mobileApps => this.mobileApps = mobileApps);
     }
 
     getImage(imageName: string) {
