@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import 'rxjs/add/operator/toPromise';
+import { HttpClient } from '@angular/common/http';
 
 import { MobileApp } from './interface/mobile-app';
 import { EducationItem } from './interface/education-item';

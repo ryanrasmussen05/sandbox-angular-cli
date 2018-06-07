@@ -40,10 +40,10 @@
             <img class="small" [src]="getImage(mobileApp.image)">
         </div>
         <div class="text">
-            <span class="title-text">{{ mobileApp.title }}</span>
-            <a *ngIf="mobileApp.androidUrl" [href]="mobileApp.androidUrl" target="_blank"
-               class="standard-link">Android</a>
-            <a *ngIf="mobileApp.appleUrl" [href]="mobileApp.appleUrl" target="_blank" class="standard-link">iOS</a>
+            <span class="title-text mr1">{{ mobileApp.title }}</span>
+
+            <a *ngIf="mobileApp.androidUrl" [href]="mobileApp.androidUrl" target="_blank" class="standard-link mr1">Android</a>
+            <a *ngIf="mobileApp.appleUrl" [href]="mobileApp.appleUrl" target="_blank" class="standard-link mr1">iOS</a>
 
             <div>
                 <p>{{ mobileApp.description }}</p>
